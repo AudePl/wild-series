@@ -1,0 +1,41 @@
+/*Start Variables*/
+:root{
+    --primary-color:#00879E;
+    --secondary-color: #ffcb44;
+    --light-color: #cdd9d9;
+    --dark-color: #000000;
+}
+/*End Variables*/
+
+@import "~bootstrap/scss/bootstrap";
+
+
+body {
+    background-color: var(--primary-color);
+    font-family: "Nimbus Roman";
+}
+
+/* Start Navbar*/
+.bg-light{
+    background-color: var(--secondary-color) !important;
+}
+
+.form-control{
+    border:1px solid var(--primary-color);
+}
+
+.btn-outline-success {
+    color: var(--dark-color);
+    border:1px solid var(--primary-color);
+}
+.btn-outline-success:hover {
+    color: var(--secondary-color);
+    border:1px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+.container-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*End Navbar*/
