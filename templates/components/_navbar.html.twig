@@ -1,69 +1,59 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-navbar">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#"><img src="{{ asset('build/home.svg') }}" alt=""/><span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="{{ asset('build/magnifier.svg') }}" alt=""/> Search</button>
-                </form>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><img src="{{ asset('build/user.svg') }}" alt=""/></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><img src="{{ asset('build/entry.svg') }}" alt=""/></a>
-            </li>
-        </ul>
-    </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="nav-link" href="#"><img src="{{ asset('build/logo-wild-serie.svg') }}" alt=""/></a>
-        </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Catégories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-    </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Acteurs
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Plateforme
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item active">
-                <p>Hello Wilder !</p>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><img src="{{ asset('build/logout.svg') }}" alt=""/></a>
-            </li>
-        </ul>
-    </div>
-    </div>
-</nav>
+<div class="my-navbar">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light row">
+            <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Catégories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Comédie</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Autres catégories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Plateforme
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">NetFlix</a>
+                            <a class="dropdown-item" href="#">Disney +</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Autres</a>
+                        </div>
+                    <li class="nav-item active">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img
+                                        src="{{ asset('build/magnifier.svg') }}" alt=""/> Search
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
+                <a class="nav-link" href="#"><img class="logo" src="{{ asset('build/logo-wild-serie.svg') }}" alt=""/></a>
+            </div>
+            <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <p>Hello Wilder !</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="{{ asset('build/user.svg') }}" alt=""/></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="{{ asset('build/entry.svg') }}" alt=""/></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="{{ asset('build/logout.svg') }}" alt=""/></a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+</div>
