@@ -1,0 +1,36 @@
+.my-navbar {
+  .bg-light{
+    background-color: $secondary !important;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  .form-control{
+    border:1px solid $primary;
+  }
+
+  .btn-outline-success {
+    color: $dark;
+    border:1px solid $primary;
+  }
+
+  .btn-outline-success:hover {
+    color: $secondary;
+    border: 1px solid $primary;
+    background-color: $primary;
+  }
+
+  .logo {
+    padding-top: 30px;
+    width: 117px;
+  }
+
+  .collapse {
+    justify-content: center;
+  }
+
+}
