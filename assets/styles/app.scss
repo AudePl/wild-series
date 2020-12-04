@@ -16,8 +16,22 @@ a:hover{
     color: $secondary;
 }
 
+.remove-margin {
+    margin: 0px;
+}
+
 .poster {
-    max-width: 500px;
+    max-width: 25%;
+}
+
+.list-seasons {
+    list-style: none;
+
+}
+
+.list-seasons li {
+    display: inline-block;
+    padding : 10px;
 }
 
 
