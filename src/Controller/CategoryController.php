@@ -29,16 +29,16 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/{category}", methods={"GET"}, name="show")
+     * @Route("/{categoryName}", methods={"GET"}, name="show")
      */
-    public function show(string $category):Response
+    public function show(string $categoryName):Response
     {
         $category = $this->getDoctrine()
             ->getRepository(Category::class)
-            ->findOneBy(['name' => $category]);
+            ->findOneBy(['name' => $categoryName]);
         if (!$category) {
             throw $this->createNotFoundException(
-                'No category with name : '.$category.' found in category\'s table.'
+                'No category with name : '.$categoryName.' found in category\'s table.'
             );
         }
 
