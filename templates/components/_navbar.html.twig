@@ -1,31 +1,7 @@
 <div class="my-navbar">
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light row">
-            <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse col-4 search-navabr" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Catégories
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Comédie</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Autres catégories</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Plateforme
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">NetFlix</a>
-                            <a class="dropdown-item" href="#">Disney +</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Autres</a>
-                        </div>
                     <li class="nav-item active">
                         <form class="form-inline my-2 my-lg-0">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -34,26 +10,52 @@
                             </button>
                         </form>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Catégories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="">Horreur</a>
+                                <a class="dropdown-item" href="">Comédie</a>
+                                <a class="dropdown-item" href="">Science-fiction</a>
+                                <a class="dropdown-item" href="">Fantastique</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ path('category_index')}}">Toutes les catégories</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Programmes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">Horreur</a>
+                            <a class="dropdown-item" href="">Comédie</a>
+                            <a class="dropdown-item" href="">Science-fiction</a>
+                            <a class="dropdown-item" href="">Fantastique</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ path('program_index')}}">Tous les programmes</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
-                <a class="nav-link" href="#"><img class="logo" src="{{ asset('build/logo-wild-serie.svg') }}" alt=""/></a>
+                <a class="nav-link" href="{{ path('app_index')}}"><img class="logo" src="{{ asset('build/logo-wild-serie.svg') }}" alt=""/></a>
             </div>
             <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <p>Hello Wilder !</p>
-                    </li>
-                    <li class="nav-item">
+                    <p>
+                        Hello Wilder !
+                    </p>
+                    <p>
                         <a class="nav-link" href="#"><img src="{{ asset('build/user.svg') }}" alt=""/></a>
-                    </li>
-                    <li class="nav-item">
+                    </p>
+                    <p>
                         <a class="nav-link" href="#"><img src="{{ asset('build/entry.svg') }}" alt=""/></a>
-                    </li>
-                    <li class="nav-item">
+                    </p>
+                    <p>
                         <a class="nav-link" href="#"><img src="{{ asset('build/logout.svg') }}" alt=""/></a>
-                    </li>
-                </ul>
+                    </p>
             </div>
     </nav>
 </div>
