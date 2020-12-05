@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Category;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,8 +15,13 @@ class DefaultController extends AbstractController
      */
     public function index(): Response
     {
+        $categories = $this->getDoctrine()
+            ->getRepository(Category::class)
+            ->findAll();
+
         return $this->render('default/index.html.twig', [
-            'website' => 'Wild Séries',
+            'category'=> $categories,
+            'website' => 'My Wild Séries',
         ]);
     }
 }

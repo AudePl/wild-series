@@ -1,16 +1,19 @@
 .my-navbar {
+
   .bg-light{
     background-color: $secondary !important;
+    margin-bottom: 20px;
   }
 
   .navbar {
     display: flex;
-    justify-content: space-between;
     height: 100px;
   }
 
   .form-control{
     border:1px solid $primary;
+    margin-left: 4px;
+    margin-right: 4px;
   }
 
   .btn-outline-success {
@@ -31,6 +34,10 @@
 
   .collapse {
     justify-content: center;
+    padding: 0;
+  }
+
+  .search-navabr {
   }
 
 }

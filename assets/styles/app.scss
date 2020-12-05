@@ -5,6 +5,11 @@
 body {
     background-color: $primary;
     font-family: $font-family, 'Arial';
+    color: $dark;
+}
+
+.block-body {
+    margin-left: 50px;
 }
 
 a {
@@ -16,6 +21,15 @@ a:hover{
     color: $secondary;
 }
 
+h1 {
+    color: $secondary;
+    font-weight: bold;
+}
+
+.title-site {
+    text-align: center;
+}
+
 .remove-margin {
     margin: 0px;
 }
@@ -24,15 +38,17 @@ a:hover{
     max-width: 25%;
 }
 
-.list-seasons {
+.style-list {
     list-style: none;
 
 }
 
-.list-seasons li {
+.list-seasons {
     display: inline-block;
     padding : 10px;
 }
+
+
 
 
 

@@ -6,7 +6,7 @@
     <h1>Toutes les catégories de la table category : </h1>
     {% for category in categories %}
         <div>
-            <ul>
+            <ul class="style-list">
                 <li>
                     {{ loop.index }} /  <a href="{{ path("category_show", { categoryName: category.name }) }}">{{ category.name }}</a>
                 </li>
