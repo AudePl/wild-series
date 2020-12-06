@@ -47,7 +47,7 @@ class CategoryController extends AbstractController
         $form->handleRequest($request);
 
         // Was the form submitted ?
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             // Get the Entity Manager
             $entityManager = $this->getDoctrine()->getManager();
             // Persist Category Object
