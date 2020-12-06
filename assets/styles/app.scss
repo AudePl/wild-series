@@ -21,6 +21,10 @@ a:hover{
     color: $secondary;
 }
 
+.link-return {
+    padding-top: 20px;
+}
+
 h1 {
     color: $secondary;
     font-weight: bold;
@@ -51,6 +55,14 @@ h1 {
 .title-episode {
     font-size: large;
     margin: 0;
+}
+
+.input {
+    background-color: $light;
+    color: $dark;
+    border: 1px solid $light;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .descriptif-episode {

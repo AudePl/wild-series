@@ -6,7 +6,9 @@ namespace App\Controller;
 use App\Entity\Episode;
 use App\Entity\Program;
 use App\Entity\Season;
+use App\Form\ProgramType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -28,6 +30,33 @@ class ProgramController extends AbstractController
             'programs' => $programs
         ]);
     }
+
+    /**
+     * The controller for the category add form
+     *
+     * @Route("/new", name="new")
+     */
+    public function new(Request $request) : Response
+    {
+        $program = new Program();
+
+        $form = $this->createForm(ProgramType::class, $program);
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            // Persist Category Object
+            $entityManager->persist($program);
+            // Flush the persisted object
+            $entityManager->flush();
+            // Finally redirect to categories list
+            return $this->redirectToRoute('program_index');
+        }
+
+        return $this->render('program/new.html.twig', [
+            "form" => $form->createView(),
+        ]);
+    }
+
 
     /**
      * @Route("/{id<\d+>}", methods={"GET"}, name="show")
@@ -53,13 +82,13 @@ class ProgramController extends AbstractController
     {
         if (!$program) {
             throw $this->createNotFoundException(
-                'No program with id : ** found in program\'s table.'
+                'No program with this parameter found in program\'s table.'
             );
         }
 
         if (!$season) {
             throw $this->createNotFoundException(
-                'No season with id : ** found for program with id ** in season\'s table.'
+                'No season with this parameter found for the program in season\'s table.'
             );
         }
 
