@@ -7,3 +7,6 @@ Lien pour la vidéo de la quête 10 Les relations bidirectionnelles avec Doctrin
 Lien pour la vidéo de la quête 11 Gardez la "form" :
 [Cliquez ici](https://www.loom.com/share/894dca3047a14c89a419df4d685b1c37)
 
+Lien pour la vidéo de la quête 12 Générer un CRUD :
+[Cliquez ici](https://www.loom.com/share/9cc1c485c5c44000b4d1d582ee17a6b8)
+
