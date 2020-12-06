@@ -13,9 +13,9 @@
             </li>
         </ul>
         {% else %}
-            Aucune série trouvée.
+            <p>Aucune série trouvée.</p> <br>
         {% endfor %}
-    <a href="{{ path('category_index') }}">
+    <a class="link-return" href="{{ path('category_index') }}">
         Retour à la liste des catégories
     </a>
 

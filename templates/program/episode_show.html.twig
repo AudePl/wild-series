@@ -12,7 +12,7 @@
             <p class="descriptif-episode">{{ episode.synopsis }}</p>
         </div>
     </div>
-    <a href="{{ path("program_season_show", { programId: program.id, seasonId: season.id }) }}">
+    <a class="link-return" href="{{ path("program_season_show", { programId: program.id, seasonId: season.id }) }}">
             Retour à la liste des épisodes de la saison {{ season.number }}
     </a>
 {% endblock %}
