@@ -16,5 +16,8 @@ Lien pour la vidéo de la quête 13 Validation :
 Lien pour la vidéo de la quête 14 Doctrine relations "Many-To-Many" :
 [Cliquez ici](https://www.loom.com/share/7e988b72f2304cf0aacec05593c47080)
 
+Lien pour la vidéo de la quête 15 EntityType :
+[Cliquez ici](https://www.loom.com/share/13eef808415e4bf391fd8a1aad42a88e)
+
 
 
