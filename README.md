@@ -19,5 +19,9 @@ Lien pour la vidéo de la quête 14 Doctrine relations "Many-To-Many" :
 Lien pour la vidéo de la quête 15 EntityType :
 [Cliquez ici](https://www.loom.com/share/13eef808415e4bf391fd8a1aad42a88e)
 
+Lien pour la vidéo de la quête 16 Les Fixtures :
+[Cliquez ici](https://www.loom.com/share/c122e76496d44e78a799469aa644f8fa)
+
+
 
 
