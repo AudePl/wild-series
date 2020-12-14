@@ -14,7 +14,7 @@
             <ul class="style-list">
                 {% for season in program.seasons %}
                 <li class="list-seasons">
-                    <a href="{{ path("program_season_show", { programId: program.id, seasonId: season.id }) }}">Saison {{ season.number }}</a>
+                    <a href="{{ path("program_season_show", { programSlug: program.slug, seasonId: season.id }) }}">Saison {{ season.number }}</a>
                 </li>
                 {% endfor %}
             </ul>

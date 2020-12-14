@@ -22,6 +22,9 @@ Lien pour la vidéo de la quête 15 EntityType :
 Lien pour la vidéo de la quête 16 Les Fixtures :
 [Cliquez ici](https://www.loom.com/share/c122e76496d44e78a799469aa644f8fa)
 
+Lien pour la vidéo de la quête 17 Introduction aux Services :
+[Cliquez ici](https://www.loom.com/share/b9646a9675824569b38b5e29c805c166)
+
 
 
 
