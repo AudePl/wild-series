@@ -15,6 +15,11 @@
     {% else %}
         Aucune catégorie trouvée.
     {% endfor %}
+    <div>
+        <a class="link-return" href="{{ path('category_new') }}">
+            Ajouter une nouvelle catégorie
+        </a>
+    </div>
 
     <a class="link-return" href="{{ path('app_index') }}">
         Retour à l'accueil
