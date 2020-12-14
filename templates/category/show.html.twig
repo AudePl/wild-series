@@ -9,7 +9,7 @@
             <h2>{{ program.id }} / {{ program.title }}</h2>
             <p>{{ program.summary }}</p>
             {# Lien vers la fiche de la série : #}
-            <a href="{{ path("program_show", { id: program.id }) }}">Voir la fiche</a>
+            <a href="{{ path("program_show", { slug: program.slug }) }}">Voir la fiche</a>
             </li>
         </ul>
         {% else %}

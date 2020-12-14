@@ -1,0 +1,92 @@
+body {
+  background-color: $primary;
+  font-family: $font-family, 'Arial';
+  color: $dark;
+}
+
+.block-body {
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+a:hover{
+  color: $secondary;
+}
+
+.link-return {
+  margin-top: 20px;
+}
+
+h1 {
+  color: $secondary;
+  font-weight: bold;
+}
+
+.title-site {
+  text-align: center;
+}
+
+.remove-margin {
+  margin: 0px;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.poster {
+  max-width: 25%;
+}
+
+.style-list {
+  list-style: none;
+
+}
+
+.list-seasons {
+  display: inline-block;
+  padding : 10px;
+}
+
+.title-episode {
+  font-size: large;
+  margin: 0;
+}
+
+.input {
+  background-color: $light;
+  color: $dark;
+  border: 1px solid $light;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.descriptif-episode {
+  font-style: italic;
+}
+
+.card-home {
+  width: 18%;
+  display: inline-block;
+  background-color: $secondary;
+  box-shadow: 5px 10px 10px #3b3932;
+  border-radius: 5px;
+  text-align: center;
+  margin-top : 20px;
+  height: 35px;
+  margin-left: 15px;
+  padding-top: 5px;
+  a:hover {
+    color: $primary;
+  }
+}
+
+
+
+
+
+
