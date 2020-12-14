@@ -1,4 +1,30 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 <h1 class="title-site">Bienvenue sur {{ website }}!</h1>
+    <div class="card-home" style="background-image: url("{{ asset('public/images/clapJaune.jpg') }}")">
+        <a class="link-return" href="{{ path('actor_index') }}">
+            Les Acteurs
+        </a>
+    </div>
+    <div class="card-home">
+        <a class="link-return" href="{{ path('category_index') }}">
+        Les Catégories
+        </a>
+    </div>
+    <div class="card-home">
+        <a class="link-return" href="{{ path('program_index') }}">
+            Les Programmes
+        </a>
+    </div>
+    <div class="card-home">
+        <a class="link-return" href="{{ path('season_index') }}">
+            Les Saisons
+        </a>
+    </div>
+    <div class="card-home">
+        <a class="link-return" href="{{ path('episode_index') }}">
+            Les Episodes
+        </a>
+    </div>
+
 {% endblock %}

@@ -25,6 +25,9 @@ Lien pour la vidéo de la quête 16 Les Fixtures :
 Lien pour la vidéo de la quête 17 Introduction aux Services :
 [Cliquez ici](https://www.loom.com/share/b9646a9675824569b38b5e29c805c166)
 
+Lien pour la vidéo de la quête 18 Envoi d'email :
+[Cliquez ici](https://www.loom.com/share/335f8fa3027147d78792170b16287280)
+
 
 
 
