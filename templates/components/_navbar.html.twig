@@ -44,17 +44,20 @@
                 <a class="nav-link" href="{{ path('app_index')}}"><img class="logo" src="{{ asset('build/logo-wild-serie.svg') }}" alt=""/></a>
             </div>
             <div class="collapse navbar-collapse col-4" id="navbarSupportedContent">
-                    <p>
-                        Hello Wilder !
-                    </p>
-                    <p>
-                        <a class="nav-link" href="#"><img src="{{ asset('build/user.svg') }}" alt=""/></a>
-                    </p>
+                    {% if app.user %}
+                        <p>
+                            Hello {{ app.user.email }} !
+                        </p>
+                        <p>
+                            <a class="nav-link" href="{{ path('app_logout')}}"><img src="{{ asset('build/logout.svg') }}" alt=""/></a>
+                        </p>
+                    {% else %}
+                        <p>
+                            <a class="nav-link" href="{{ path('app_login')}}"><img src="{{ asset('build/user.svg') }}" alt=""/></a>
+                        </p>
+                    {% endif %}
                     <p>
                         <a class="nav-link" href="#"><img src="{{ asset('build/entry.svg') }}" alt=""/></a>
-                    </p>
-                    <p>
-                        <a class="nav-link" href="#"><img src="{{ asset('build/logout.svg') }}" alt=""/></a>
                     </p>
             </div>
     </nav>
