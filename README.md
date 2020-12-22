@@ -28,6 +28,7 @@ Lien pour la vidéo de la quête 17 Introduction aux Services :
 Lien pour la vidéo de la quête 18 Envoi d'email :
 [Cliquez ici](https://www.loom.com/share/335f8fa3027147d78792170b16287280)
 
-
+Lien pour la vidéo de la quête 19 Gestion des utilisateurs :
+[Cliquez ici](https://www.loom.com/share/09fa4c5dd76e4162b49cff09f31a3549)
 
 

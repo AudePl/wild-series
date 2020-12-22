@@ -23,8 +23,36 @@
                 <th>Synopsis</th>
                 <td>{{ episode.synopsis }}</td>
             </tr>
+            <tr>
+                <th>Synopsis</th>
+                <td>{{ episode.synopsis }}</td>
+            </tr>
+            <tr>
+                <th>Commentaires</th>
+                <td>
+                <ul>
+                {% for comment in episode.comments %}
+                <li>{{ comment.comment }}</li>
+                {% endfor %}
+                </ul>
+                </td>
+            </tr>
         </tbody>
     </table>
+
+    {% if app.user %}
+    <div>
+        {{ form_start(formComment) }}
+        <div>
+            {{ form_row(formComment.rate) }}
+        </div>
+        <div>
+            {{ form_row(formComment.comment) }}
+        </div>
+        <button class="btn">{{ button_label|default('Save') }}</button>
+        {{ form_end(formComment) }}
+    </div>
+    {% endif %}
 
     <a href="{{ path('episode_index') }}">back to list</a>
 
