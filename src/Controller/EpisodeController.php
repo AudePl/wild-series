@@ -73,18 +73,17 @@ class EpisodeController extends AbstractController
     public function show(Episode $episode, Request $request): Response
     {
         $comment = new Comment();
-        $user = $this->getUser();
         $formComment = $this->createForm(CommentType::class, $comment);
         $formComment->handleRequest($request);
         $comment->setEpisode($episode);
-        $comment->setAuthor($user);
+        $comment->setAuthor($this->getUser());
 
         if ($formComment->isSubmitted() && $formComment->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($comment);
             $entityManager->flush();
 
-            return $this->redirectToRoute('episode_index');
+            return $this->redirectToRoute('episode_show',['slug' => $episode->getSlug()]);
         }
         return $this->render('episode/show.html.twig', [
             'episode' => $episode,

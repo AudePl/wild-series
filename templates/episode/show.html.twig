@@ -5,6 +5,12 @@
 {% block body %}
     <h1>Episode</h1>
 
+    <div class="box-button">
+        {% include('episode/_delete_form.html.twig')  %}
+        <a class="edit" href="{{ path('episode_edit', {'slug': episode.slug}) }}">Edit</a>
+    </div>
+
+
     <table class="table">
         <tbody>
             <tr>
@@ -27,36 +33,29 @@
                 <th>Synopsis</th>
                 <td>{{ episode.synopsis }}</td>
             </tr>
-            <tr>
-                <th>Commentaires</th>
-                <td>
-                <ul>
-                {% for comment in episode.comments %}
-                <li>{{ comment.comment }}</li>
-                {% endfor %}
-                </ul>
-                </td>
-            </tr>
         </tbody>
     </table>
+    <p>Commentaires :</p>
+    <ul>
+        {% for comment in episode.comments %}
+            <li>
+                <p>Note : {{ comment.rate }}/20</p>
+                <p>{{ comment.comment }}</p>
+                {% if is_granted("ROLE_ADMIN") or app.user == comment.author %}
+                    <p>{%  include('comment/_form_delete.html.twig') %}</p>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
 
     {% if app.user %}
-    <div>
-        {{ form_start(formComment) }}
-        <div>
-            {{ form_row(formComment.rate) }}
-        </div>
-        <div>
-            {{ form_row(formComment.comment) }}
-        </div>
-        <button class="btn">{{ button_label|default('Save') }}</button>
-        {{ form_end(formComment) }}
-    </div>
+        {% include '/comment/_form_edit.html.twig' %}
     {% endif %}
 
-    <a href="{{ path('episode_index') }}">back to list</a>
+    <a class="link-return" href="{{ path('episode_index') }}">back to list</a> </br>
 
-    <a href="{{ path('episode_edit', {'slug': episode.slug}) }}">edit</a>
 
-    {{ include('episode/_delete_form.html.twig') }}
+
+
+
 {% endblock %}

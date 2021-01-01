@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20201221183218 extends AbstractMigration
+final class Version20201223135645 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -21,11 +21,17 @@ final class Version20201221183218 extends AbstractMigration
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE comment CHANGE author_id author_id INT NOT NULL');
+        $this->addSql('ALTER TABLE program ADD owner_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE program ADD CONSTRAINT FK_92ED77847E3C61F9 FOREIGN KEY (owner_id) REFERENCES user (id)');
+        $this->addSql('CREATE INDEX IDX_92ED77847E3C61F9 ON program (owner_id)');
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE comment CHANGE author_id author_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE program DROP FOREIGN KEY FK_92ED77847E3C61F9');
+        $this->addSql('DROP INDEX IDX_92ED77847E3C61F9 ON program');
+        $this->addSql('ALTER TABLE program DROP owner_id');
     }
 }

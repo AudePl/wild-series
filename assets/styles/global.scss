@@ -18,7 +18,7 @@ a:hover{
 }
 
 .link-return {
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 h1 {
@@ -83,6 +83,34 @@ h1 {
   a:hover {
     color: $primary;
   }
+}
+
+.delete {
+  border: 1px solid $secondary;
+  color: $secondary;
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+.save {
+  @extend .delete
+}
+
+.edit {
+  @extend .delete;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  &:hover {
+    color: $black;
+  }
+}
+
+.box-button {
+  display: flex;
+  margin-bottom: 10px;
 }
 
 
