@@ -1,0 +1,11 @@
+<div>
+    {{ form_start(formComment) }}
+    <div>
+        {{ form_row(formComment.rate) }}
+    </div>
+    <div>
+        {{ form_row(formComment.comment) }}
+    </div>
+    <button class="btn save">{{ button_label|default('Save') }}</button>
+    {{ form_end(formComment) }}
+</div>

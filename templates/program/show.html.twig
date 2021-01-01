@@ -34,6 +34,10 @@
 
     <a class="link-return" href="{{ path('program_index') }}">
         Retour à la liste des programmes
-    </a>
+    </a> </br>
+
+    {% if is_granted("ROLE_ADMIN") or app.user == program.owner %}
+        <a href="{{ path('program_edit', { 'slug': program.slug} ) }}">Éditer</a>
+    {%endif%}
 
 {% endblock %}

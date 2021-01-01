@@ -9,6 +9,29 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserFixtures extends Fixture
 {
+    const USERS = [
+        'User_1' => [
+            'mail' => 'contributor1@monsite.com',
+            'role' => ['ROLE_CONTRIBUTOR'],
+        'password' => 'contributor1password',
+        ],
+        'User_2' => [
+            'mail' => 'admin1@monsite.com',
+            'role' => ['ROLE_ADMIN'],
+            'password' => 'admin1password',
+        ],
+        'User_3' => [
+            'mail' => 'contributor2@monsite.com',
+            'role' => ['ROLE_CONTRIBUTOR'],
+            'password' => 'contributor2password',
+        ],
+        'User_4' => [
+            'mail' => 'admin2@monsite.com',
+            'role' => ['ROLE_ADMIN'],
+            'password' => 'admin2password',
+        ],
+    ];
+
     private $passwordEncoder;
 
     public function __construct(UserPasswordEncoderInterface $passwordEncoder)
@@ -18,28 +41,18 @@ class UserFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        // Création d’un utilisateur de type “contributeur” (= auteur)
-        $contibutor = new User();
-        $contibutor->setEmail('contributor@monsite.com');
-        $contibutor->setRoles(['ROLE_CONTRIBUTOR']);
-        $contibutor->setPassword($this->passwordEncoder->encodePassword(
-            $contibutor,
-            'contributorpassword'
-        ));
+        foreach (self::USERS as $userKey => $userData){
+            $user = new User();
+            $user->setEmail($userData['mail']);
+            $user->setRoles($userData['role']);
+            $user->setPassword($this->passwordEncoder->encodePassword(
+                $user,
+                $userData['password']
+            ));
 
-        $manager->persist($contibutor);
-
-        // Création d’un utilisateur de type “administrateur”
-        $admin = new User();
-        $admin->setEmail('admin@monsite.com');
-        $admin->setRoles(['ROLE_ADMIN']);
-        $admin->setPassword($this->passwordEncoder->encodePassword(
-            $admin,
-            'adminpassword'
-        ));
-
-        $manager->persist($admin);
-
+            $manager->persist($user);
+            $this->addReference($userKey, $user);
+        }
         $manager->flush();
     }
 }
