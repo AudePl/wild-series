@@ -34,5 +34,8 @@ Lien pour la vidéo de la quête 19 Gestion des utilisateurs :
 Lien pour la vidéo de la quête 20 Sécurisons nos routes :
 [Cliquez ici](https://www.loom.com/share/5c0c44eecbe8409c83c12d52734893d8)
 
+Lien pour la vidéo de la quête 21 Inscription d'un utilisateur :
+[Cliquez ici](https://www.loom.com/share/98486d2cbe4c45998a39c6a2a27e34cb)
+
 
 

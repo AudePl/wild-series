@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+
+    {% if app.user %}
+        <h1>Hello {{ user.email }} !</h1>
+
+        <div>
+        <p>Tes commentaires :</p>
+        {% if user.comments is not empty  %}
+            <ul>
+                {% for comment in user.comments %}
+                    <li>
+                        {{ comment.episode.season.program.title }} -
+                        Saison : {{ comment.episode.season.number }} -
+                        Episode : {{ comment.episode.title }} <br>
+                        Note : {{ comment.rate }}/20 - {{ comment.comment }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Pas de commentaires</p>
+        {% endif %}
+        </div>
+
+        <div>
+        <p>Tes programmes :</p>
+        {% if user.programs is not empty %}
+            <ul>
+                {% for program in user.programs %}
+                    <li>{{ program.title }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Pas de programmes</p>
+        {% endif %}
+        </div>
+
+    {% else %}
+        <p>Vous n'êtes pas connecté</p>
+        <a class="nav-link" href="{{ path('app_login')}}">Se Connecter</a>
+    {% endif %}
+
+{% endblock %}

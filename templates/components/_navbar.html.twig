@@ -49,16 +49,20 @@
                             Hello {{ app.user.email }} !
                         </p>
                         <p>
-                            <a class="nav-link" href="{{ path('app_logout')}}"><img src="{{ asset('build/logout.svg') }}" alt=""/></a>
+                            <a class="nav-link" href="{{ path('app_logout')}}"><img src="{{ asset('build/logout.svg') }}" alt="logout" title="se déconnecter"/></a>
+                        </p>
+                        <p>
+                            <a class="nav-link" href="{{ path('profile')}}"><img src="{{ asset('build/parameter.svg') }}" alt="my-profile" title="mon compte"/></a>
                         </p>
                     {% else %}
                         <p>
-                            <a class="nav-link" href="{{ path('app_login')}}"><img src="{{ asset('build/user.svg') }}" alt=""/></a>
+                            <a class="nav-link" href="{{ path('app_login')}}"><img src="{{ asset('build/user.svg') }}" alt="login" title="se connecter"/></a>
+                        </p>
+                        <p>
+                            <a class="nav-link" href="{{ path('app_register')}}"><img src="{{ asset('build/entry.svg') }}" alt="registration" title="s'inscrire"/></a>
                         </p>
                     {% endif %}
-                    <p>
-                        <a class="nav-link" href="#"><img src="{{ asset('build/entry.svg') }}" alt=""/></a>
-                    </p>
+
             </div>
     </nav>
 </div>
