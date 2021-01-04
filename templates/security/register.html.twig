@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% form_theme registrationForm 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <h1>Inscrivez-vous!</h1>
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword, {
+        label: 'Password'
+    }) }}
+    {{ form_row(registrationForm.agreeTerms) }}
+
+    <button class="btn save" type="submit" class="btn">S'enregistrer</button>
+    {{ form_end(registrationForm) }}
+    </section>
+{% endblock %}
