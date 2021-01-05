@@ -40,5 +40,8 @@ Lien pour la vidéo de la quête 21 Inscription d'un utilisateur :
 Lien pour la vidéo de la quête 22 Requêtes personnalisées :
 [Cliquez ici](https://www.loom.com/share/ca21dc9dd71742f5b8d49da368c80640)
 
+Lien pour la vidéo de la quête 23 Sesions et messages flash :
+[Cliquez ici](https://www.loom.com/share/0fcef9fde2694fd68bd85b9640c6e446)
+
 
 
