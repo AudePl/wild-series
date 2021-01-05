@@ -37,5 +37,8 @@ Lien pour la vidéo de la quête 20 Sécurisons nos routes :
 Lien pour la vidéo de la quête 21 Inscription d'un utilisateur :
 [Cliquez ici](https://www.loom.com/share/98486d2cbe4c45998a39c6a2a27e34cb)
 
+Lien pour la vidéo de la quête 22 Requêtes personnalisées :
+[Cliquez ici](https://www.loom.com/share/ca21dc9dd71742f5b8d49da368c80640)
+
 
 
