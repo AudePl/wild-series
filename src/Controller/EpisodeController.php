@@ -51,6 +51,8 @@ class EpisodeController extends AbstractController
             $entityManager->persist($episode);
             $entityManager->flush();
 
+            $this->addFlash('success', 'The new episode has been created');
+
             $email = (new Email())
                 ->from($this->getParameter('mailer_from'))
                 ->to('wilder-bd7856@inbox.mailtrap.io')
@@ -102,6 +104,8 @@ class EpisodeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
+            $this->addFlash('success', 'The new episode has been modified');
+
             return $this->redirectToRoute('episode_index');
         }
 
@@ -120,6 +124,8 @@ class EpisodeController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($episode);
             $entityManager->flush();
+
+            $this->addFlash('danger', 'The episode has been deleted');
         }
 
         return $this->redirectToRoute('episode_index');

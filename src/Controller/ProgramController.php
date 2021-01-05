@@ -63,6 +63,8 @@ class ProgramController extends AbstractController
             $entityManager->persist($program);
             $entityManager->flush();
 
+            $this->addFlash('success', 'The new program has been created');
+
             $email = (new Email())
                 ->from($this->getParameter('mailer_from'))
                 ->to('wilder-bd7856@inbox.mailtrap.io')
@@ -165,6 +167,8 @@ class ProgramController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash('success', 'The new program has been modified');
 
             return $this->redirectToRoute('program_index');
         }
